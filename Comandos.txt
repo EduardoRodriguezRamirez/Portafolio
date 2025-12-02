@@ -1,0 +1,34 @@
+winget install --id Git.Git -e --source winget
+
+enviroment
+pip freeze > requirements.txt
+
+
+Instalar variables de entorno
+pip install python-dotenv
+
+GIT HUB
+git status
+git add . (Todo los archivos "." o "Nombre archivo")
+
+
+Descargar
+DB Browser fo SQLite
+
+
+Comando para las migraciones
+python manage.py makemigrations
+
+Comando para aplicar las migraciones
+python manage.py migrate
+
+Agregar la App Portafolio a los settings: INSTALLED_APSS
+'Portafolio'
+
+from myapp.models import Project, Task
+p = Project(name="aplicacion movil")
+#Este comando integra los datos a la BD
+p.save()
+#Obtenemos una lista de todos los datos de la tabla Project
+PT = Project.objects.all()
+
