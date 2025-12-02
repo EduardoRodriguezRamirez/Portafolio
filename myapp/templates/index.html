@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load static %}
+    <div class="video-container"> 
+        <h1>Anime</h1>
+        <video preload controls src="{% static 'file.mkv' %}" type="video/mp4">
+            <track
+                default
+                kind="captions"
+                srclang="es"
+                src="{% static 'output.vtt' %}" />
+                Download the
+                video, and
+                <a href="{% static 'output.vtt' %}">subtitles</a>.
+</video>
+
+
+    </div>  
+</body>
+</html>

@@ -1,11 +1,17 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, StreamingHttpResponse, FileResponse
 from .models import Project, Task
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
+from django.conf import settings
+import os
 
-# Create your views here.
-def index(request, id):
+
+
+"""def index(request, id):
     projects = list(Project.objects.values())
-    return JsonResponse(projects.index(id), safe=False)
+    return JsonResponse(projects.index(id), safe=False)"""
+    
+def index(request):
+    return render(request, 'index.html')
 
 def hello(request, id):
     print(type(id))
